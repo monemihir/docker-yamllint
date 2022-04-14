@@ -1,0 +1,14 @@
+---
+version: "3"
+networks:
+  default:
+    external:
+      name: bridge
+
+services:
+  yamllint:
+    image: monemihir/yamllint:1.26.3
+    build:
+      context: .
+      args:
+        YAMLLINT_VERSION: "1.26.3"
